@@ -1,0 +1,12 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "First NodeJS app for 2106 batch",
+  "main": "src/index",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo coolio"
+  },
+  "author": "2106RNCN",
+  "license": "ISC"
+}
