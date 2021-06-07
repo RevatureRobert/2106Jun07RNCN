@@ -1,0 +1,11 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "some stuff, I guess",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo something cool"
+  },
+  "author": "Jared",
+  "license": "ISC"
+}
