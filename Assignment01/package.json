@@ -1,0 +1,16 @@
+{
+  "name": "assignment01",
+  "version": "1.0.0",
+  "description": "Assignment 01 for Revature training",
+  "main": "src/index.js",
+  "scripts": {
+    "start":"node src/index.cjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Louis Casillas",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+	"readline-sync": "*"
+  }
+}
