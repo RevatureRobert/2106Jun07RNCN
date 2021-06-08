@@ -8,5 +8,3 @@
 3. keep the functions and objects modularized by keeping them in their own module (files).
 
 The program should be ran with `npm start` command and should continue to run until the user decides to stop.
-
-something new for example
