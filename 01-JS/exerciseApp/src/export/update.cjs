@@ -1,16 +1,16 @@
-function nameUpdate(name){
-  this.name = name;
+function nameUpdate(name, obj){
+  obj.name = name;
 }
 
-function addressUpdate(address){
-  this.address = address;
+function addressUpdate(address, obj){
+  obj.address = address;
 }
-function phoneNumberUpdate(phoneNumber){
-  this.phoneNumber = phoneNumber;
+function phoneNumberUpdate(phoneNumber, obj){
+  obj.phoneNumber = phoneNumber;
 }
 
-function otherInfoUpdate(otherInfo){
-  this.otherInfo = [...otherInfo];
+function otherInfoUpdate(otherInfo, obj){
+  obj.otherInfo.push(otherInfo);
 }
 
 module.exports = {
