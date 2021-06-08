@@ -1,0 +1,13 @@
+{
+  "name": "firstapp",
+  "version": "1.0.0",
+  "description": "the first nodejs application for the 2106 batch",
+  "main": "src/index.js",
+  "scripts": {
+    "start":"node src/import/mjsImport.js",
+    "test": "echo something cool"
+  },
+  "author": "2106Rncn",
+  "license": "ISC",
+  "type": "module"
+}
