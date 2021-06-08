@@ -1,6 +1,7 @@
 {
   "name": "firstapp",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "First NodeJS app for 2106 batch",
   "main": "src/index",
   "scripts": {
@@ -9,4 +10,15 @@
   },
   "author": "2106RNCN",
   "license": "ISC"
+=======
+  "description": "the first nodejs application for the 2106 batch",
+  "main": "src/index.js",
+  "scripts": {
+    "start":"node src/import/mjsImport.js",
+    "test": "echo something cool"
+  },
+  "author": "2106Rncn",
+  "license": "ISC",
+  "type": "module"
+>>>>>>> dd2cc3fda7cb4d3306f4961b7d21fb41009384c2
 }
