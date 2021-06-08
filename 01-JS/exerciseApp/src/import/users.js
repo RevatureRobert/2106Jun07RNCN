@@ -1,12 +1,6 @@
-const user = require('../export/update.cjs')
+const user = require('../export/update.cjs');
 const readline = require('readline');
-
-const userObject = {
-  name:null,
-  address:null,
-  phoneNumber:null,
-  otherInfo:[]
-}
+const userObject = require('../export/object.cjs');
 
 const r = readline.createInterface({
     input: process.stdin,
