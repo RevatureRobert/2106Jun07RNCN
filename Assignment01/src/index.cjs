@@ -1,8 +1,7 @@
 const User = require('../export/user.cjs');
+const input_functions = require('../export/get_input.cjs');
 
 const current_user = new User();
-
-const input_functions = require('../export/get_input.cjs');
 
 current_user.user_name = input_functions.getInfo('What is your name? ');
 current_user.user_name = input_functions.getInfo('What is your address? ');
