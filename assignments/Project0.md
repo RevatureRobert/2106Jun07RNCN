@@ -12,6 +12,8 @@ documentation, and have functional/meaningful unit tests.
  - [PokeAPI](https://pokeapi.co/)
  - [Random Taco API](https://github.com/evz/tacofancy-api)
  - [Chuck Norris API](https://api.chucknorris.io/)
+ - [Assortment of other examples](https://github.com/public-apis/public-apis)
+ - [Stock Trading API](https://alpaca.markets/docs/api-documentation/api-v2/)
 
 ### Technologies
  - NodeJS
