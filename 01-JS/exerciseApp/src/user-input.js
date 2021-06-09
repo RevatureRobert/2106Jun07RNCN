@@ -16,7 +16,7 @@ function info(){
     switch(addInfo.toUpperCase()){
         case "Y":
             const addMoreInfo = prompt('what would you like to input for your additional info?');
-            obj.data.otherData[obj.data.otherData.length + 1] = addMoreInfo;
+            obj.data.otherData[obj.data.otherData.length] = addMoreInfo;
             info();
             break;
         case "N":
@@ -26,5 +26,6 @@ function info(){
     }
 }
 
+console.log("");
 console.log("Here is the data you entered ealier. :)");
 console.log(obj.read());
