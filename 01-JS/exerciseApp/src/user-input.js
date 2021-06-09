@@ -1,5 +1,4 @@
 const obj = require('../src/user-data.cjs');
-// const readlineSync = require('readline-sync');
 const prompt = require('prompt-sync')();
 
 const memberName = prompt('What is your name?');
@@ -27,5 +26,5 @@ function info(){
 }
 
 console.log("");
-console.log("Here is the data you entered ealier. :)");
+console.log("Here is the data you entered earlier. :)");
 console.log(obj.read());
