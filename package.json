@@ -1,0 +1,20 @@
+{
+  "name": "smallproject",
+  "version": "1.0.0",
+  "description": "first hands on project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node NewProjects/SmallProject.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/johnm0724/read.me.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/johnm0724/read.me/issues"
+  },
+  "homepage": "https://github.com/johnm0724/read.me#readme"
+}
