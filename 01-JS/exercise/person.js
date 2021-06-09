@@ -6,9 +6,10 @@
 
 //Creation of the Person object
 const person = {
-    "Name":" ",
-    "Address":" ",
-    "Number":" "
+    "Name":" Jacob Default",
+    "Address":" Jacob Default",
+    "Number":" Jacob Default"
 };
+
 // exporting the person 
-module.exports = person;
+module.exports = {person: person};

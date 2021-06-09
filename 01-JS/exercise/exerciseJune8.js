@@ -3,24 +3,64 @@
  * This a small application that is used to take in a persons inputs and save them for the person to view later
  * 
  * */
-//This is the importing of the person.js file
+
+// The import statement that is used to bring over the object
 const person = require('./person.js');
 
 // This is the way that the NodeJs site was using for the readline() function
-const readline = require('readline').createInterface({
-    input: process.stdin,
-    output: process.stdout
+const readline = require('readline');
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
 });
 
+// function name(){
+//     rl.question("What is your address? : ", address())
+// }
+
+// function address(){
+//     rl.question("What is your phone number? : ", phone())
+// }
+
+// function phone(){
+//     rl.question("Is there any other information that you want to share? ", 
+//     person.Name = names);
+//     person.Address = addresses;
+//     person.Phone = phones;
+//     person.Other = others
+//     console.log(person);
+//     console.log("Thank you for the information");
+//     rl.close();
+
+// }
 //These are the questions that are asked to the person for their input
 
-readline.question("What is your name? : ", function(name) { //The name
-readline.question("What is your address :  ", function(address) { //The address
-readline.question("What is your phone number : ", function(number){ //The phone number
-            person.Name = name; 
-            person.Address = address; // They are then inputted into the object that is inside of person.js
-            person.Number = number;
-            console.log(person);
-        });
+ rl.question("What is your name? : ", function(names){
+    rl.question("What is your address :  ", function(addresses){
+        rl.question("What is your phone number : ", function(phones){
+                person.Name = names;
+                person.Address = addresses;
+                person.Phone = phones;
+                console.log(person);
+                console.log("Thank you for the information");
+                rl.close();
+
+        }); 
+
     });
-});
+
+ });
+
+
+//  person.name(names);
+//  person.address(address);
+//  person.phone(phone);
+//  person.other(other);
+
+//  console.log(person);
+//  console.log("Thank you for submitting your information")
+
+
+
+// rl.close();
