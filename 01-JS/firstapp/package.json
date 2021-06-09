@@ -4,9 +4,10 @@
   "description": "the first nodejs application for the 2106 batch",
   "main": "src/index.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/import/mjsImport.js",
     "test": "echo something cool"
   },
   "author": "2106RNCN",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
