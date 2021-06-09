@@ -5,7 +5,7 @@ const prompt = require('prompt-sync')({sigint: true});
 console.log("Welcome to your fitness app!");
 let cont = true;
 while(cont){
-    let decision = prompt("Press \'1\' to view your information. Press \'2\' to update. Press \'0\' to exit. ");
+    let decision = prompt("Press \'1\' to update your information. Press \'2\' to view your information. Press \'0\' to exit. ");
     switch(decision){
         case "1": 
             enterInfo.info();
@@ -19,5 +19,6 @@ while(cont){
             break;
         default:
             console.log("Invalid option");
+            break;
     }
 }
