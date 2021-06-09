@@ -1,6 +1,7 @@
 {
   "name": "2106jun07rncn",
   "version": "1.0.0",
+  "type": "module",
   "description": "Revature nodejs practice",
   "main": "index.js",
   "scripts": {
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/RevatureRobert/2106Jun07RNCN/issues"
   },
-  "homepage": "https://github.com/RevatureRobert/2106Jun07RNCN#readme"
+  "homepage": "https://github.com/RevatureRobert/2106Jun07RNCN#readme",
+  "dependencies": {
+    "prompt": "latest"
+  }
 }
