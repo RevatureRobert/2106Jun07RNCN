@@ -1,7 +1,8 @@
 const user = {
-    "Name":"",
-    "Address":"",
-    "Number":""
+    "name":"",
+    "address":"",
+    "number":"",
+    "extra":""
 };
 
 module.exports = {user};
