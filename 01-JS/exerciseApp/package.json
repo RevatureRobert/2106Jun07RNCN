@@ -1,0 +1,11 @@
+{
+  "name": "contactinfoapp",
+  "version": "1.0.0",
+  "description": "an application used to gather the personal information of the user.",
+  "main": "src/index.js",
+  "scripts": {
+     "start": "node src/index.js"
+  },
+  "author": "ottomatthew",
+  "license": "ISC"
+}
