@@ -27,3 +27,8 @@ documentation, and have functional/meaningful unit tests.
 
 ### Scoring
 Scoring will be based on the functionality and structure of the api, documentation, REST practices followed, Project structure, testing, and the presentation itself.
+ - security
+ - code performance
+
+### Repo
+ - Create your own repo
