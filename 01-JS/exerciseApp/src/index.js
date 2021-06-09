@@ -1,4 +1,3 @@
-const prompt = require('prompt-sync')({sigint: true});
 const menu = require('./export/displayMenu.cjs');
 const editUser = require('./export/enterInformation.cjs');
 const viewUser = require('./export/viewInformation.cjs');
