@@ -1,3 +1,4 @@
+ //new class
  class Person {
     constructor(){
         this.name = "Bob";
@@ -42,4 +43,5 @@
    
     
 }
+//exports the Person class
 module.exports = Person;

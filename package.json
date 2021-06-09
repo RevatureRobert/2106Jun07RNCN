@@ -1,6 +1,6 @@
 {
   "name": "exerciseapp",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "test our first  app",
   "main": "src/index.js",
   "scripts": 
@@ -8,7 +8,7 @@
 
     "start": "node src/index.js",
     "test": "echo \"hello World\""
-    
+
   },
   "repository": {
     "type": "git",
