@@ -1,0 +1,15 @@
+{
+  "name": "exapp",
+  "version": "1.0.0",
+  "description": "Store personal info",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "echo testing"
+  },
+  "author": "Joab Smith",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
