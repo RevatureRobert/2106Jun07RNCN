@@ -12,9 +12,19 @@ class User {
     getValues(){
         let ans = "";
         this.fields.forEach(e => {
-            ans += e + ": " + eval("this." + e) + "\n";
+            ans += e + ": " + this[e] + "\n";
         });
         return ans;
+    }
+    //display a particular value
+    display(){
+        const prompt = require('prompt-sync')({sigint: true});
+        const field = prompt("Which property would you like to display? ");
+        if(!this.fields.includes(field)){
+            return `Sorry, there is no data on ${field}`; 
+        } else {
+            return field + ": " + this[field] + "\n";
+        }
     }
     //Ask the user the value of a specified string.
     ask(field){
@@ -23,25 +33,25 @@ class User {
         }
         const prompt = require('prompt-sync')({sigint: true});
         try {
-            eval("let a = this." + field);
+            this[field];
         } catch{
             console.log("Invalid input field.");
             return;
         }
         const answer = prompt("Input your " + field + ": ");
-        eval("this." + field + " = answer");
+        this[field] = answer;
 
     }
     //Ask the user for a field, then its value
     dask(){
         const prompt = require('prompt-sync')({sigint: true});
         const str = prompt("What information would you like to store? ");
-        let ans = str.replaceAll(/[^a-zA-Z0-9]/g,"");
+        let ans = str;
         this.ask(ans);
     }
     askall(){
         this.fields.forEach(e => {
-            eval("this.ask(\'" + e +"\');");
+            this.ask(e);
         });
         /*this.ask("Name");
         this.ask("Phone");
