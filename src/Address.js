@@ -1,5 +1,5 @@
 import prompt from "prompt";
-
+// "keep the functions and objects modularized by keeping them in their own module (files)."
 export default class Address{
 
     #streetNumber;
@@ -55,6 +55,7 @@ export default class Address{
 
                 name: "stateCode",
                 description: "Please enter your state's two letter abbreviation:",
+                // Exhaustive list of all US states' and territories' two letter codes, ignoring the case of the input as we reformat it to uppercase below.
                 pattern: /^(A[LKSZRAEP]|C[AOT]|D[EC]|F[LM]|G[AU]|HI|I[ADLN]|K[SY]|LA|M[ADEHINOPST]|N[CDEHJMVY]|O[HKR]|P[ARW]|RI|S[CD]|T[NX]|UT|V[AIT]|W[AIVY])$/ig,
                 message: "State code must be valid, two letter abbreviations of state names:",
                 required: true,
@@ -88,7 +89,8 @@ export default class Address{
     }
 
     toString(){
-
+        // Even from in the class, these were undefined unless accessed this way. I haven't used this newer private syntax,
+        // but this seems very unintuitive even for JS, is this possibly a bug?
         return `${this["#streetNumber"]} ${this["#streetName"]}${this["#extension"] ? ` (${this["#extension"]})` : ""} ${this["#city"]}, ${this["#stateCode"]}, ${this["#zipCode"]}`;
 
     }

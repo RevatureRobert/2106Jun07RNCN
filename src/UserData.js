@@ -1,7 +1,7 @@
 import prompt from "prompt";
 import Address from "./Address.js";
-
-export class UserData{
+// "create an object that can hold the users name, address, phone number, and other personal information."
+export default class UserData{
 
     #name;
     #phoneNumber;
@@ -9,7 +9,7 @@ export class UserData{
     #address;
 
     constructor(callBack){
-
+        // "take user input from the console to update the object."
         prompt.get([
 
             {
@@ -69,4 +69,3 @@ export class UserData{
     }
 
 }
-
