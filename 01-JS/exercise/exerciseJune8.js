@@ -13,14 +13,14 @@ const readline = require('readline').createInterface({
 });
 
 //These are the questions that are asked to the person for their input
+
 readline.question("What is your name? : ", function(name) { //The name
-    readline.question("What is your address :  ", function(address) { //The address
-        readline.question("What is your phone number : ", function(number){ //The phone number
+readline.question("What is your address :  ", function(address) { //The address
+readline.question("What is your phone number : ", function(number){ //The phone number
             person.Name = name; 
             person.Address = address; // They are then inputted into the object that is inside of person.js
             person.Number = number;
             console.log(person);
-            readline.close();
         });
     });
 });

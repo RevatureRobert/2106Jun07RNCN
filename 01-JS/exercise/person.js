@@ -11,4 +11,4 @@ const person = {
     "Number":" "
 };
 // exporting the person 
-module.exports = {person};
+module.exports = person;
