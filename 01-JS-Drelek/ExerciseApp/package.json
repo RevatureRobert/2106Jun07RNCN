@@ -1,0 +1,14 @@
+{
+    "name": "personnel-detailer",
+    "version": "1.0.0",
+    "description": "Creates and records personal details",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "Jared Burkamper",
+    "license": "ISC",
+    "dependencies": {
+        "prompt": "^1.1.0"
+    }
+}
