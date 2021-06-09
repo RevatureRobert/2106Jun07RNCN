@@ -1,3 +1,4 @@
+// object used to store user information
 const user = {
     "name":"",
     "address":"",
@@ -5,4 +6,5 @@ const user = {
     "extra":""
 };
 
+// exports user object
 module.exports = {user};
