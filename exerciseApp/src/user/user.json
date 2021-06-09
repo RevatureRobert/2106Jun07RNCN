@@ -1,0 +1,9 @@
+{
+    "name": "Name",
+    "address1": "Street Address",
+    "address2": "City, State",
+    "phone": "911",
+    "other": [
+        "Don't worry about it"
+    ]
+}

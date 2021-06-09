@@ -1,0 +1,15 @@
+{
+  "name": "exerciseapp",
+  "version": "1.0.0",
+  "description": "First exercise app",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "test": "Try it"
+  },
+  "author": "Imran Ilyas",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.1.0"
+  }
+}
