@@ -1,0 +1,22 @@
+{
+  "name": "exerciseapp",
+  "version": "1.0.0",
+  "description": "test our first  app",
+  "main": "src/index.js",
+  "scripts": 
+  {
+
+    "start": "node src/index.js",
+    "test": "echo \"hello World\""
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RevatureRobert/2106Jun07RNCN.git"
+  },
+  "author": "MTH",
+  "license": "ISC",  
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
+}
