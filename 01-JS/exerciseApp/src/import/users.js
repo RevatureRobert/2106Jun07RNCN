@@ -38,6 +38,7 @@ const loopTilstop = function() {
                 console.log(userObject);
                 break;
             default:
+                // console.log("something is wrong")
                 break;
         }
         if (answer === "STOP"){
@@ -45,8 +46,8 @@ const loopTilstop = function() {
             return r.close();
         } else { 
             if (i === 4){
-                console.log(userObject);
-                i = 0;
+                // console.log(userObject);
+                // i = 0;
                 loopTilstop();
             } else {
                 i++;
