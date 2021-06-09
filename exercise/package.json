@@ -1,0 +1,12 @@
+{
+    "name": "exercise_jacob",
+    "version": "1.0.0",
+    "description": "Exercise June 8th",
+    "main": "/exerciseJune8.js",
+    "scripts": {
+      "start": "node exerciseJune8.js",
+      "test": "echo Jacob"
+    },
+    "author": "J19Kula",
+    "license": "ISC"
+  }
