@@ -22,14 +22,21 @@ class User {
             this.fields.push(field);
         }
         const prompt = require('prompt-sync')({sigint: true});
+        try {
+            eval("let a = this." + field);
+        } catch{
+            console.log("Invalid input field.");
+            return;
+        }
         const answer = prompt("Input your " + field + ": ");
-        eval("this." + field + "= answer;");
+        eval("this." + field + " = answer");
+
     }
     //Ask the user for a field, then its value
     dask(){
         const prompt = require('prompt-sync')({sigint: true});
         const str = prompt("What information would you like to store? ");
-        let ans = str.replace(/[^a-zA-Z0-9]/,"");
+        let ans = str.replaceAll(/[^a-zA-Z0-9]/g,"");
         this.ask(ans);
     }
     askall(){
