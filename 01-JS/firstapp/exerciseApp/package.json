@@ -1,0 +1,12 @@
+{
+  "name": "exerciseapp",
+  "version": "1.0.0",
+  "description": "Creating a small node js terminal app to track user information",
+  "main": "01-JS/firstapp/exerciseApp/",
+  "scripts": {
+    "start": "node userInfo.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
