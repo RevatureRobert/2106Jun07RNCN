@@ -1,0 +1,12 @@
+{
+  "name": "exerciseapp",
+  "version": "1.0.0",
+  "description": "> Create a small node js terminal application to keep track of a users personal information.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "YTyler",
+  "license": "ISC"
+}
