@@ -8,5 +8,8 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "YTyler",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
