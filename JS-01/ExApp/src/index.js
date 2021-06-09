@@ -11,9 +11,9 @@ const phone = rLS.question("Phone: ");
 user = new Person(name, address, phone);
             
 //start menu loop
-checkSelection();
-function checkSelection(){
-    let choice = 10;
+let choice = 10;
+while(choice != '0'){
+    
     console.log();
     console.log(`Available options: 
         1: Update Name
@@ -26,33 +26,28 @@ function checkSelection(){
     // switch between chioce of action
     switch(choice){
         case '1': {
-            user.name = rLS.question("Enter new Name: ");
-            checkSelection();
+            user.name = rLS.question("Enter new Name: ");           
             break;
-        };
+        }
         case '2': {
-            user.address = rLS.question("Enter new Address: ");
-            checkSelection();
+            user.address = rLS.question("Enter new Address: ");           
             break;
-        };
+        }
         case '3': {
-           user.phone = rLS.question("Enter new Phone number: ");
-           checkSelection();
+           user.phone = rLS.question("Enter new Phone number: ");       
            break;
-        };
+        }
         case '4': {
             let infoType = rLS.question("Catagory: ");
             let info = rLS.question("Enter your " + infoType + ': ');
             let currentInfo = user.moreInfo;
             currentInfo[currentInfo.length] = infoType + ': ' + info;
-            user.moreInfo = currentInfo;
-            checkSelection();
+            user.moreInfo = currentInfo;           
             break;
             
-        };
+        }
         case '5': {
-            user.displayAll();
-            checkSelection();
+            user.displayAll();           
             break;
         }
         case '0': {
@@ -60,13 +55,12 @@ function checkSelection(){
             user.displayAll();
             console.log("Thanks for useing the app!");
             break;
-        };
-        default: {
-            console.log("Please choose from the list");
-            checkSelection();
         }
-    };
-};
+        default: {
+            console.log("Please choose from the list");            
+        }
+    }
+}
 
 
 
