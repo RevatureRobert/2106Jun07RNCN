@@ -1,0 +1,12 @@
+{
+  "name": "exerciseapp",
+  "version": "1.0.0",
+  "description": "For testing budding programmers.",
+  "main": "index.js",
+  "scripts": {
+    "start":"node index",
+    "test": "console.log('Initializing?')"
+  },
+  "author": "Brandon",
+  "license": "ISC"
+}

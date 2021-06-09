@@ -1,0 +1,5 @@
+{"firstName":"James","lastName":"Bandabee","address":"123 Street St","phone":"1231234567"}
+{"firstName":"Test","lastName":"Name","address":"Nowhere","phone":"2223334444"}
+{"firstName":"Switch","lastName":"Statement","address":"is working","phone":"maybe"}
+{"firstName":"Yo","address":"Test","phone":"confirmed"}
+{"firstName":"Bandabee","lastName":"Man","address":"Someplace","phone":"No"}
