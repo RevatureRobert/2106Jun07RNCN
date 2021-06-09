@@ -1,0 +1,8 @@
+{
+    "name": "User Name", 
+    "address": "123 Somewhere St, City, State ZIP", 
+    "phone": "(000) 000-0000",
+    "other": [
+        "this", "is", "invalid", "data"
+    ]
+}
