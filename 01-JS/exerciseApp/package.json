@@ -1,0 +1,12 @@
+{
+    "name": "firstminiassignment",
+    "version": "1.0.0",
+    "description": "first practice using nodejs",
+    "scripts": {
+        "start": "node main.cjs"
+    },
+    "type": "module",
+    "dependencies": {
+        "prompt-sync": "^4.2.0"
+    }
+}
