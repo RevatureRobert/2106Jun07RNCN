@@ -37,9 +37,9 @@ const loopTilstop = function() {
                 user.otherInfoUpdate(answer, userObject);
                 console.log(userObject);
                 break;
-            default:
-                // console.log("something is wrong")
-                break;
+            // default:
+            //     // console.log("something is wrong")
+            //     break;
         }
         if (answer === "STOP"){
             console.log("Goodbye");
