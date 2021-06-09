@@ -1,0 +1,16 @@
+{
+  "name": "exercise",
+  "version": "1.0.0",
+  "description": "The user exercise",
+  "main": "src/exercise.js",
+  "scripts": {
+    "start": "node src/exercise.js",
+    "test": "echo something cool"
+  },
+  "author": "2106Rncn",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.1.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
