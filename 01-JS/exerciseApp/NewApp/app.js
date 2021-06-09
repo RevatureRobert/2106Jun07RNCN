@@ -33,26 +33,30 @@ if (userUpdate == 'Y') {
 switch (newInfo) {
   case '1':
     let name = prompt('What is your name?');
+    person.name = name
     console.log('Thanks, your info is saved, please verify below')
-    console.log(name);
+    console.log(person);
     break;
 
   case '2':
     let address = prompt('What is your address?');
+    person.address = address
     console.log('Thanks, your info is saved, please verify below')
-    console.log(address);
+    console.log(person);
     break;
 
   case '3':
     let phoneNumber = prompt('What is your phone number?');
+    person.phoneNumber = phoneNumber
     console.log('Thanks, your info is saved, please verify below')
-    console.log(phoneNumber);
+    console.log(person);
     break;
 
   case '4':
-    let otherInfo = prompt('Would you like to add any other info?')
+    let otherInfo = prompt('What other info would you like to add?')
+    person.otherInfo = otherInfo
     console.log('Thanks, your info is saved, please verify below')
-    console.log(otherInfo);
+    console.log(person);
     break;
 
   default:
