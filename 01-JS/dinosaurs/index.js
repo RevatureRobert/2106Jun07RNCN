@@ -26,4 +26,5 @@ const __dirname = dirname(__filename);console.log("entry point");
 repo.loadPromisedData().then(data => {
     // repo.db = data;
     console.log(data);
+    console.log("promise worked")
 })
