@@ -1,0 +1,18 @@
+[
+  {
+    "name": "dinosawr",
+    "diet": "herbivore",
+    "breed": "stegosaurs",
+    "era": "paleo",
+    "weight": 60000.02,
+    "habitat": "forest"
+  },
+  {
+    "name": "grumpy",
+    "diet": "carnivore",
+    "breed": "t-rex",
+    "era": "4000 years ago",
+    "weight": 192485,
+    "habitat": "forest"
+  }
+]
