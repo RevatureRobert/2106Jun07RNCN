@@ -1,0 +1,30 @@
+const prompt = require('prompt-sync')({sigint: true});
+ let newInfo = prompt('Enter the number of the element you would you like to change?');
+ switch (newInfo) {
+    case '1':
+      let name = prompt('What is your name?');
+      console.log('Thanks, your info is saved, please verify below')
+      console.log(name);
+      break;
+  
+    case '2':
+      let address = prompt('What is your address?');
+      console.log('Thanks, your info is saved, please verify below')
+      console.log(address);
+      break;
+  
+    case '3':
+      let phoneNumber = prompt('What is your phone number?');
+      console.log('Thanks, your info is saved, please verify below')
+      console.log(phoneNumber);
+      break;
+  
+    case '4':
+      let otherInfo = prompt('What other info would you like to add?')
+      console.log('Thanks, your info is saved, please verify below')
+      console.log(otherInfo);
+      break;
+  
+    default:
+      console.log(`Sorry, please select from options 1 - 4.`);
+  }
