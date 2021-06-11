@@ -40,11 +40,17 @@
 // console.log(x);
 
 // let array = [1,2,3];
-// function changer(arr){
-//   arr.push(2);
+// let array2 = array;
+// let x = 10;
+// function changer(){
+//   x += 20;
 // }
 
-// changer(array);
-// console.log(array); 
+// changer();
+// console.log(x);
 
-console.log(15);
+// console.log(15);
+y();
+const y =function (){
+  console.log("this is hoisting")
+}
