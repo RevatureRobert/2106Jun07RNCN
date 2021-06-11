@@ -30,7 +30,27 @@ function createPost(post) {
         })
     }
 
-    createPost({ title: 'Post Three', body: 'This is post three'})
-    .then(getPosts);
+    // createPost({ title: 'Post Three', body: 'This is post three'})
+    // .then(getPosts);
+
+    //async await
+    async function init() {
+        await createPost({ title: 'Post Three', body: 'This is post three'});
+        getPosts();
+
+    }
+    init();
+
+    //async await fetch
+    // async function fetchUsers() {
+    //     const res = await fetch
+    //     ('https://jsonplaceholder.typicode.com/users');
+
+    //     const data = await res.json();
+
+    //     console.log(data);
+    // }
+
+    // fetchUsers();
     //.catch(err => console.log(err));
 
