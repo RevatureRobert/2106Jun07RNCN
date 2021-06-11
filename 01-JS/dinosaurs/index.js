@@ -1,11 +1,27 @@
 import * as repo from './src/data/DinoRepo.js'
 import { Dinosaur } from './src/model/Dinosaur.js';
-//* retrieved from nodejs documentation: https://nodejs.org/docs/latest-v12.x/api/esm.html#esm_no_require_exports_module_exports_filename_dirname
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+import * as http from 'http';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);console.log("entry point");
+const server = http.createServer( async (req, res) => {
+    // send back json, this is for when a request gets received
+    await repo.loadPromisedData();
+    // res.send(repo.db)
+    res.setHeader("Content-Type","application/json")
+    res.write(repo.db);
+    res.end();
+});
+
+server.listen(3000, () =>{
+    console.log('listening on port 3000')
+});
+// async function program() {
+//     await repo.loadPromisedData()
+//     console.log(repo.db);
+
+// }
+// program();
+
+
 
 // if(NaN){
 //     console.log(true);
@@ -23,7 +39,3 @@ const __dirname = dirname(__filename);console.log("entry point");
 // repo.loadData();
 // console.log(repo.db);
 
-repo.loadPromisedData().then(data => {
-    // repo.db = data;
-    console.log(data);
-})
