@@ -7,12 +7,11 @@ export class Dinosaur {
         this.weight = weight;
         this.habitat = habitat;
     }
+
     name;
     diet;
     breed;
     era;
     weight;
-    habitat;
-
-    
+    habitat; 
 }
