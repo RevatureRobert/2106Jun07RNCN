@@ -1,14 +1,10 @@
 var unirest = require("unirest");
 
-var req = unirest("GET", "https://vx-e-additives.p.rapidapi.com/categories/6");
-
-req.query({
-	"locale": "en"
-});
+var req = unirest("GET", "https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/reference/v1.0/countries/en-US");
 
 req.headers({
 	"x-rapidapi-key": "be2957b1f3msh586aed459ef47ffp109e49jsn5f8093a8bbe4",
-	"x-rapidapi-host": "vx-e-additives.p.rapidapi.com",
+	"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com",
 	"useQueryString": true
 });
 
