@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "types": [ "node" ],
+        "typeRoots": [ "../node_modules/@types" ],
+        "target": "ESNext",
+        "outDir": "./dist"
+    },
+
+    "include": ["./src/*.ts"]
+}
