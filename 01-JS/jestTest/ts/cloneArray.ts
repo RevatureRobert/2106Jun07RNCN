@@ -1,3 +1,3 @@
-export default function cloneArray(array){
+export default function cloneArray(array : any){
   return [...array];
 }
