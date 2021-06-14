@@ -8,7 +8,7 @@ const server: http.Server = http.createServer(
     await repo.loadPromisedData();
     // res.send(repo.db)
     res.setHeader("Content-Type", "application/json");
-    res.write(repo.db);
+    res.write(JSON.stringify(repo.db));
     res.end();
   }
 );
