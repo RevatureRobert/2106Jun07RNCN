@@ -1,0 +1,16 @@
+{
+  "name": "personal-info",
+  "version": "1.0.0",
+  "description": "A terminal application for accessing and modifying personal information",
+  "main": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node C:/users/Bigmo/Revature/personal-info"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "personal-info": "./bin/index.js"
+  }
+}
