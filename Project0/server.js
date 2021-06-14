@@ -7,6 +7,8 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+const { DynamoDBClient, ListTablesCommand } = require("@aws-sdk/client-dynamodb");
+
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST
@@ -29,6 +31,19 @@ router.get('/', function(req, res) {
 // REGISTER OUR ROUTES -------------------------------
 // all of our routes will be prefixed with /api
 app.use('/api', router);
+
+// Sending request to DynamoDB client
+
+(async () => {
+    const client = new DynamoDBClient({ region: "us-west-2" });
+    const command = new ListTablesCommand({});
+    try {
+      const results = await client.send(command);
+      console.log(results.TableNames.join("\n"));
+    } catch (err) {
+      console.error(err);
+    }
+  })();
 
 // START THE SERVER
 // =============================================================================
