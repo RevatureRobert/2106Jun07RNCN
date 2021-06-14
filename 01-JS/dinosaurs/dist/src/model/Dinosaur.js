@@ -1,5 +1,5 @@
 export class Dinosaur {
-    constructor(name, diet, breed, era, weight, habitat){
+    constructor(name, diet, breed, era, weight, habitat) {
         this.name = name;
         this.diet = diet;
         this.breed = breed;
@@ -7,11 +7,4 @@ export class Dinosaur {
         this.weight = weight;
         this.habitat = habitat;
     }
-
-    name;
-    diet;
-    breed;
-    era;
-    weight;
-    habitat; 
 }
