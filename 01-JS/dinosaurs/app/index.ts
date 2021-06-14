@@ -8,7 +8,7 @@ const server: http.Server = http.createServer(
     await repo.loadPromisedData();
     // res.send(repo.db)
     res.setHeader("Content-Type", "application/json");
-    res.write(repo.db);
+    res.write(JSON.stringify(repo.db));
     res.end();
   }
 );
@@ -16,6 +16,8 @@ const server: http.Server = http.createServer(
 server.listen(3000, () => {
   console.log("listening on port 3000");
 });
+
+
 // async function program() {
 //     await repo.loadPromisedData()
 //     console.log(repo.db);
