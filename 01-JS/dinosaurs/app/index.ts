@@ -6,7 +6,7 @@ const server: http.Server = http.createServer(
     // send back json, this is for when a request gets received
     await repo.loadPromisedData();
     res.setHeader("Content-Type", "application/json");
-    res.write(repo.db);
+    res.write(JSON.stringify(repo.db));
     res.end();
 });
 
