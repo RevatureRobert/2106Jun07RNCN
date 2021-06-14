@@ -4,5 +4,5 @@
         "outDir": "./dist",
         "moduleResolution": "Node"
     },
-    "include": ["./app/src/*.ts","./app/*.ts"]
+    "include": ["./app/src/*.ts","./app/*.ts", "./app/src/*/*.ts"]
 }
