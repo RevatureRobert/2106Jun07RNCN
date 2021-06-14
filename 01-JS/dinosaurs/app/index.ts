@@ -1,18 +1,20 @@
-import * as repo from './src/data/DinoRepo.js'
-import { Dinosaur } from './src/model/Dinosaur.js';
-import * as http from 'http';
+import * as repo from "./src/data/DinoRepo.js";
+import { Dinosaur } from "./src/model/Dinosaur.js";
+import * as http from "http";
 
-const server = http.createServer( async (req, res) => {
+const server: http.Server = http.createServer(
+  async (req: http.IncomingMessage, res: http.OutgoingMessage) => {
     // send back json, this is for when a request gets received
     await repo.loadPromisedData();
     // res.send(repo.db)
-    res.setHeader("Content-Type","application/json")
-    res.write(repo.db);
+    res.setHeader("Content-Type", "application/json");
+    res.write(JSON.stringify(repo.db));
     res.end();
-});
+  }
+);
 
-server.listen(3000, () =>{
-    console.log('listening on port 3000')
+server.listen(3000, () => {
+  console.log("listening on port 3000");
 });
 // async function program() {
 //     await repo.loadPromisedData()
@@ -20,8 +22,6 @@ server.listen(3000, () =>{
 
 // }
 // program();
-
-
 
 // if(NaN){
 //     console.log(true);
@@ -35,7 +35,5 @@ server.listen(3000, () =>{
 // repo.writeArray();
 // console.log(__dirname); // can be used to retrieve the absolute path
 
-
 // repo.loadData();
 // console.log(repo.db);
-
