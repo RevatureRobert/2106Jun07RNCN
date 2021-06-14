@@ -1,0 +1,14 @@
+[
+    {
+        "name": "Awakening Bellow",
+        "cost": 1,
+        "color": "red",
+        "attribute": "Intimidate",
+        "job": "Brute",
+        "type": "Action",
+        "subtype": "None",
+        "attack": 0,
+        "defense": 3,
+        "description": "The next Brute action played gains +3."
+    }
+]
