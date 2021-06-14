@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "target": "ES2018",
+    "outDir": "dist",
+    "moduleResolution": "node"
+  },
+  "include": ["./ts/*.ts"],
+}

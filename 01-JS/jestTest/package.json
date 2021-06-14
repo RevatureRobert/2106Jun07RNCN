@@ -2,14 +2,33 @@
   "name": "jesttest",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "./dist/index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage ./dist",
+    "compile": "tsc",
+    "start": "node ./dist/index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Marc Skwarczynski",
   "license": "ISC",
+  "type": "module",
+  "babel":{
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ]
+  },
   "devDependencies": {
-    "jest": "^27.0.4"
+    "@babel/core": "^7.14.5",
+    "@babel/parser": "^7.14.5",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/preset-typescript": "^7.14.5",
+    "@babel/types": "^7.14.5",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.4",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
   }
 }
