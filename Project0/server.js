@@ -7,6 +7,7 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
+var AWS = require('aws-sdk');
 const { DynamoDBClient, ListTablesCommand } = require("@aws-sdk/client-dynamodb");
 
 
