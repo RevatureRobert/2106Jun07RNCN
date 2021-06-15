@@ -1,0 +1,16 @@
+{
+  "name": "typescriptintroduction",
+  "version": "1.0.0",
+  "description": "Redo of typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "do it",
+    "start": "node src/index.ts",
+    "compile": "tsc"
+  },
+  "author": "imran",
+  "license": "ISC",
+  "dependencies": {
+    "typescript": "^4.3.2"
+  }
+}
