@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "ES2018",
-    "outDir": "dist"
+    "outDir": "dist",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
   },
   "include": ["./app/src/*.ts", "./app/*.ts", "./app/src/*/*.ts"]
 }

@@ -7,4 +7,7 @@ export class Dinosaur {
         this.weight = weight;
         this.habitat = habitat;
     }
+    get nameAndEra() {
+        return `The name is ${this.name} and the era is ${this.era}`;
+    }
 }
