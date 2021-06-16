@@ -2,7 +2,9 @@
     "compilerOptions": {
         "target": "ES2018",
         "outDir": "./dist",
-        "moduleResolution": "Node"
+        "moduleResolution": "Node",
+        "allowSyntheticDefaultImports": true,
+        "module": "CommonJS"
     },
     "include": ["./app/src/*.ts","./app/*.ts", "./app/src/*/*.ts"]
 }
