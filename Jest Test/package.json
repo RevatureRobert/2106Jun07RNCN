@@ -2,11 +2,16 @@
   "name": "jest-test",
   "version": "1.0.0",
   "description": "",
+<<<<<<< HEAD
   "main": "Simple.js",
+=======
+  "main": "babel.config.js",
+>>>>>>> ottomatthew
   "scripts": {
     "test": "jest"
   },
   "author": "",
+<<<<<<< HEAD
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.14.5",
@@ -20,4 +25,7 @@
     "ts-jest": "^27.0.3",
     "typescript": "^4.3.2"
   }
+=======
+  "license": "ISC"
+>>>>>>> ottomatthew
 }
