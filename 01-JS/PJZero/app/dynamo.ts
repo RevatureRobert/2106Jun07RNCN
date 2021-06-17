@@ -1,9 +1,11 @@
-import * as AWS from 'aws-sdk';
-import {DynamoDBClient, PutItemCommand, ScanInput} from '@aws-sdk/client-dynamodb';
-import { GetItemCommand } from "@aws-sdk/client-dynamodb";
-import { GetCommand } from "@aws-sdk/lib-dynamodb";
-import { ScanCommand } from "@aws-sdk/client-dynamodb";
-import * as DynaDB from "@aws-sdk/client-dynamodb";
+// import * as AWS from 'aws-sdk';
+import {DynamoDBClient, PutItemCommand, ScanInput, GetItemCommand, ScanCommand} from '@aws-sdk/client-dynamodb';
+import { json } from 'express';
+// import { GetItemCommand } from "@aws-sdk/client-dynamodb";
+// import { GetCommand } from "@aws-sdk/lib-dynamodb";
+// import { ScanCommand } from "@aws-sdk/client-dynamodb";
+// import * as DynaDB from "@aws-sdk/client-dynamodb";
+import { dragon } from './src/model/dragonObject';
 
 
 const REGION = "us-east-2"; //e.g. "us-east-1"
@@ -12,22 +14,8 @@ const ddbClient = new DynamoDBClient({ region: REGION });
 
 // ***CONSTANTS FOR TESTING PURPOSES***
 const TABLE_NAME = 'dragons';
-const KEY_VALUE = '1';
-const SORT_KEY = 'Alduin';
 
-
-export const getDragonTest = async () => {
-    var params = {
-        TableName: TABLE_NAME,
-        Key: {
-            "entityID": {"N": KEY_VALUE},
-            "Name": {"S": SORT_KEY}
-        },
-    }
-    return await ddbClient.send(new GetItemCommand(params));
-}
-
-export const findOneDragon = async (searchName) => {
+export const findDragon = async (searchName) => {
     var params = {
         FilterExpression: "#n = :n",
         ExpressionAttributeNames: {"#n": "Name"},
@@ -39,43 +27,27 @@ export const findOneDragon = async (searchName) => {
     return await ddbClient.send(new ScanCommand(params));
 }
 
-const TEST_DRAGON = {
-    "entityID": {
-      "N": "50"
-    },
-    "Flight": {
-      "BOOL": true
-    },
-    "Legs": {
-      "N": "4"
-    },
-    "Length (Meters)": {
-      "N": "1"
-    },
-    "Magical": {
-      "BOOL": true
-    },
-    "Name": {
-      "S": "Spyro"
-    },
-    "Origin": {
-      "S": "Spyro the Dragon"
-    },
-    "Style": {
-      "S": "Western"
-    },
-    "Weight (Kilos)": {
-      "N": "3"
-    },
-    "Wings": {
-      "N": "2"
-    }
-  }
-
-export const addOrUpdateDragon = async () => {
+export const addDragonByObject = async (dragonObject: dragon) => {
+    let cleanDragon = sanitizeDragon(dragonObject);
     const params = {
         TableName: TABLE_NAME,
-        Item: TEST_DRAGON
+        Item: cleanDragon
     };
     return await ddbClient.send(new PutItemCommand(params));
+}
+
+function sanitizeDragon (dragonObject: dragon) {
+    let Item = {
+        "entityID": {"N": dragonObject.entityID.toString()},
+        "Name": {"S": dragonObject.Name},
+        "Origin": {"S": dragonObject.Origin},
+        "Style": {"S": dragonObject.Style},
+        "Weight (Kilos)": {"N": dragonObject.Weight.toString()},
+        "Length (Meters)": {"N": dragonObject.Length.toString()},
+        "Wings": {"N": dragonObject.Wings.toString()},
+        "Legs": {"N": dragonObject.Legs.toString()},
+        "Flight": {"BOOL": dragonObject.Flight},
+        "Magical": {"BOOL": dragonObject.Magical}
+    }
+    return Item;
 }

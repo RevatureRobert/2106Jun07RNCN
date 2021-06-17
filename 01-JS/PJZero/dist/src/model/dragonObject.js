@@ -1,14 +1,14 @@
 export class dragon {
-    constructor(name, origin, style, wings, legs, lengthMeters, weightKilos, flight, magical, description) {
-        this.name = name;
-        this.origin = origin;
-        this.style = style;
-        this.wings = wings;
-        this.legs = legs;
-        this.lengthMeters = lengthMeters;
-        this.weightKilos = weightKilos;
-        this.flight = flight;
-        this.magical = magical;
-        this.description = description;
+    constructor(entityID, Name, Origin, Style, Wings, Legs, Length, Weight, Flight, Magical) {
+        this.entityID = entityID;
+        this.Name = Name;
+        this.Origin = Origin;
+        this.Style = Style;
+        this.Wings = Wings;
+        this.Legs = Legs;
+        this.Length = Length;
+        this.Weight = Weight;
+        this.Flight = Flight;
+        this.Magical = Magical;
     }
 }
