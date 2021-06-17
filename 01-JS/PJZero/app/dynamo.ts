@@ -1,34 +1,14 @@
-// import * as AWS from 'aws-sdk';
-import {DynamoDBClient} from '@aws-sdk/client-dynamodb';
+import * as AWS from 'aws-sdk';
+import {DynamoDBClient, PutItemCommand, ScanInput} from '@aws-sdk/client-dynamodb';
 import { GetItemCommand } from "@aws-sdk/client-dynamodb";
 import { GetCommand } from "@aws-sdk/lib-dynamodb";
 import { ScanCommand } from "@aws-sdk/client-dynamodb";
-import { DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb";
+import * as DynaDB from "@aws-sdk/client-dynamodb";
+
 
 const REGION = "us-east-2"; //e.g. "us-east-1"
 // Create an Amazon DynamoDB service client object.
 const ddbClient = new DynamoDBClient({ region: REGION });
-
-const marshallOptions = {
-    // Whether to automatically convert empty strings, blobs, and sets to `null`.
-    convertEmptyValues: false, // false, by default.
-    // Whether to remove undefined values while marshalling.
-    removeUndefinedValues: false, // false, by default.
-    // Whether to convert typeof object to map attribute.
-    convertClassInstanceToMap: false, // false, by default.
-};
-
-const unmarshallOptions = {
-    // Whether to return numbers as a string instead of converting them to native JavaScript numbers.
-    wrapNumbers: false, // false, by default.
-};
-
-const translateConfig = { marshallOptions, unmarshallOptions };
-
-// Create the DynamoDB Document client.
-const ddbDocClient = DynamoDBDocumentClient.from(ddbClient, translateConfig);
-
-
 
 // ***CONSTANTS FOR TESTING PURPOSES***
 const TABLE_NAME = 'dragons';
@@ -37,28 +17,65 @@ const SORT_KEY = 'Alduin';
 
 
 export const getDragonTest = async () => {
-
-    const params = {
+    var params = {
         TableName: TABLE_NAME,
         Key: {
-            entityID: KEY_VALUE,
-            Name: SORT_KEY
+            "entityID": {"N": KEY_VALUE},
+            "Name": {"S": SORT_KEY}
         },
-    };
-    const gainedDragons = async () => {
-        // const data = await ddbDocClient.send(new GetCommand(params));
-        const data = await ddbDocClient.send(new GetCommand(params));
-        console.log("Success", data.Item);
-        return data;
-      };
-    console.log(gainedDragons.toString());
-    return gainedDragons;
+    }
+    return await ddbClient.send(new GetItemCommand(params));
 }
 
-// const addOrUpdateDragon = async (dragon) => {
-//     const params = {
-//         TableName: TABLE_NAME,
-//         Item: dragon
-//     };
-//     return await dynamoClient.put(params).promise();
-// }
+export const findOneDragon = async (searchName) => {
+    var params = {
+        FilterExpression: "#n = :n",
+        ExpressionAttributeNames: {"#n": "Name"},
+        ExpressionAttributeValues: {
+            ":n": {S: searchName}
+        },
+        TableName: TABLE_NAME,
+    }
+    return await ddbClient.send(new ScanCommand(params));
+}
+
+const TEST_DRAGON = {
+    "entityID": {
+      "N": "50"
+    },
+    "Flight": {
+      "BOOL": true
+    },
+    "Legs": {
+      "N": "4"
+    },
+    "Length (Meters)": {
+      "N": "1"
+    },
+    "Magical": {
+      "BOOL": true
+    },
+    "Name": {
+      "S": "Spyro"
+    },
+    "Origin": {
+      "S": "Spyro the Dragon"
+    },
+    "Style": {
+      "S": "Western"
+    },
+    "Weight (Kilos)": {
+      "N": "3"
+    },
+    "Wings": {
+      "N": "2"
+    }
+  }
+
+export const addOrUpdateDragon = async () => {
+    const params = {
+        TableName: TABLE_NAME,
+        Item: TEST_DRAGON
+    };
+    return await ddbClient.send(new PutItemCommand(params));
+}
