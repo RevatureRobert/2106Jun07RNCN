@@ -7,17 +7,16 @@ const dynamodb = new AWS.DynamoDB.DocumentClient();
 //create a test table
 const tID = 42;
 
-var params = {
+  var params = {
     TableName : 'TestTable',
-    Item: {
-        PK: `TEST${tID}`,
-        SK: `TESTDATA${tID}`,
-        name:"Test Inc",
-        deleteme: "delete"
-    }
+    Key:{
+      PK:"TEST42",
+    },
   };
   
-  dynamodb.put(params, function(err, data) {
+ 
+
+  dynamodb.delete(params, function(err, data){
     if (err) console.log(err);
     else console.log(data);
   });
