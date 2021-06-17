@@ -1,0 +1,12 @@
+{
+    "entityID": 1,
+    "Flight": true,
+    "Legs": 2,
+    "Length (Meters)": 7,
+    "Magical": true,
+    "Name": "Alduin",
+    "Origin": "The Elder Scrolls",
+    "Style": "Western-Inspired",
+    "Weight (Kilos)": 800,
+    "Wings": 2
+  }
