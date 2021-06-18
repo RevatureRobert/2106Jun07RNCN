@@ -8,12 +8,10 @@
 var express    = require('express');        // call express
 var app        = express();                 // define our app using express
 var bodyParser = require('body-parser');
-var DAO = require('../dist/FlightDaoImpl.js').default;
+const FlightDaoImplem = require('../dist/FlightDaoImplem.js');
  
-
 //Instantiate a FlightDao
-let flightDao = new FlightDaoImpl();
-
+let flightDao = new FlightDaoImplem();
 
 // configure app to use bodyParser()
 // this will let us get the data from a POST

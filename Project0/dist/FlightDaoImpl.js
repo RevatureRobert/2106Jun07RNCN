@@ -6,7 +6,7 @@ var AWS = require('aws-sdk');
 //Load config file and establish client
 AWS.config.loadFromPath('./config.json');
 var docClient = new AWS.DynamoDB.DocumentClient();
-class FlightDaoImpl {
+module.exports = class FlightDaoImpl {
     getFlightsAugust() {
         var params = {
             TableName: "August_Flights"
