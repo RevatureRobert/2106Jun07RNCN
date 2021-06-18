@@ -71,5 +71,6 @@
     "outDir": "./dist",
     "moduleResolution": "Node"
   },
-  "include": ["./app/src/*.ts","./app/*.ts", "./app/src/*/*.ts"]
+  "include": ["./app/src/*.ts","./app/*.ts", "./app/src/*/*.ts"],
+  "exclude": ["./app/src/*.test.ts", "./app/*.test.ts", "./app/src/*/*.test.ts"]
 }
