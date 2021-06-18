@@ -1,0 +1,13 @@
+{
+  "name": "employee_contact_app",
+  "version": "1.0.0",
+  "description": "my first JavaScript app",
+  "main": "src/employees.cjs",
+  "scripts": {
+    "start":"node employeeContactApp/employees.cjs/",
+    "test": "echo I did it!"
+  },
+  "author": "tsnewsome",
+  "license": "ISC",
+  "type": "module"
+}
