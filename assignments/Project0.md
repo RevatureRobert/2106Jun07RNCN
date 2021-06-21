@@ -24,7 +24,8 @@ documentation, and have functional/meaningful unit tests.
  
 ### Deadline
  - 06/23/2021
-
+ - Create a new repository (either under the RevatureRobert Organization, or your own account) and provide a link to that repository in the readme of your branch of this repository.
+ 
 ### Scoring
 Scoring will be based on the functionality and structure of the api, documentation, REST practices followed, Project structure, testing, and the presentation itself.
 
