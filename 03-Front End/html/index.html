@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Our awesome first html page</title>
+    </head>
+    <body>
+        <p>This is a paragraph</p>
+        <image src="sklgh" alt="This image could not be displayed"/>
+
+        <!-- The form allows you to send information to your server. The action
+                attribute will determine where the request will be made and
+                the method attribute will determine what http method it will
+                use. The input elements within the form element will include 
+                information in the web request with key value pairs. The
+                pairs will have a key of the name attribute and the value
+                will be the value attribute.
+        -->
+        <form method="POST" action="http://localhost:3000/form" >
+            <input name="username" type="text" placeholder="username">
+            <input name="password" type="password" placeholder="password">
+            <input type="submit" value="submit">
+        </form>
+    </body>
+</html>
