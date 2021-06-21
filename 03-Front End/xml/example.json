@@ -1,0 +1,6 @@
+{
+    "name":"bob",
+    "stuff": {
+        "nestedStuff":"stuff"
+    }
+}
