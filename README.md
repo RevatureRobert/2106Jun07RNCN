@@ -1,4 +1,4 @@
 # 2106Jun07RNCN
 
-My code for Project0 is located:
+My submission for Project0:
 https://github.com/calebmsword/Project0/tree/main
