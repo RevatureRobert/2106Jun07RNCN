@@ -1,0 +1,12 @@
+i.	<p style=”color: red”> this is red</p>
+
+<head>
+    <style>
+        P {
+            Color: red;
+        }
+        .button {
+            Background-color: #fe6239;
+        }
+    </style>
+</head>
