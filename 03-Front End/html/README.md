@@ -25,3 +25,7 @@
  2. html: The actual beginning of the document.
  2. head (optional): provides meta data for the browser to understand the document.
  3. body: The actual html to be rendered.
+
+## Block vs Inline elements
+ 1. Block elements: Will take up the entire width of the screen, no matter the content size.
+ 2. Inline elements: will take up only the width that the content needs.
