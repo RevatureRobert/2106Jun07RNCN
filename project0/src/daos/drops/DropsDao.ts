@@ -70,12 +70,12 @@ class DropsDao implements Dao{
             TableName: this.table,
             //Item: IDrop, 
             Item: {
-                dropName: {S: IDrop.dropName},
-                "generalName": IDrop.generalName,
-                "monster": IDrop.monster,
-                "dropRate":  IDrop.dropRate,
-                "minWorldRank": IDrop.minWorldRank,
-                "rarity": IDrop.rarity,
+                "dropName": {M: IDrop.dropName},
+                "generalName": {S: IDrop.generalName},
+                "monster": {SS: IDrop.monster},
+                "dropRate":  {N: IDrop.dropRate},
+                "minWorldRank": {N: IDrop.minWorldRank},
+                "rarity": {S: IDrop.rarity},
             }
         };
         console.log(params);

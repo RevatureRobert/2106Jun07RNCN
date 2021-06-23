@@ -26,8 +26,8 @@ export async function getAll(req: Request, res: Response) {    //Check if that s
 }
 
 export async function updateDrop(req: Request, res: Response){
-    const d = req.body;
-    return await dao.deleteDrop(d);
+    const {updated} = req.body;
+    return await dao.deleteDrop(updated);
 }
 
 export async function deleteDrop(req: Request, res: Response){
@@ -37,7 +37,7 @@ export async function deleteDrop(req: Request, res: Response){
 }
 
 export async function addItem(req: Request, res: Response){
-    let drop = req.body;
+    let {drop} = req.body;
     console.log(typeof drop);
     if(!drop){
         return res.status(BAD_REQUEST).json({
