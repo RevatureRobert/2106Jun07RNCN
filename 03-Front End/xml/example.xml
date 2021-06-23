@@ -1,0 +1,6 @@
+<example>
+    <name>bob</name>
+    <stuff>
+        <nestedStuff>stuff</nestedStuff>
+    </stuff>
+</example>

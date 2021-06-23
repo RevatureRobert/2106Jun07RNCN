@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="note2.xsd"?>
+<note>
+    <to></to>
+    <from></from>
+    <heading></heading>
+    <body></body>
+</note>
