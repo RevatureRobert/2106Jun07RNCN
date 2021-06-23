@@ -20,6 +20,22 @@ export async function getItem(req: Request, res: Response) {
     return res.status(OK).json(drop).end();
 }
 
+export async function getAll(req: Request, res: Response) {    //Check if that specific dropName is in DB
+    //Returns Item information to server
+    return await dao.getAll();
+}
+
+export async function updateDrop(req: Request, res: Response){
+    const d = req.body;
+    return await dao.deleteDrop(d);
+}
+
+export async function deleteDrop(req: Request, res: Response){
+    const {dropName} = req.body;
+    let drop:IMonsterDrops|null = await dao.deleteDrop(dropName);
+    return res.status(OK).json(drop).end();
+}
+
 export async function addItem(req: Request, res: Response){
     let drop = req.body;
     console.log(typeof drop);
