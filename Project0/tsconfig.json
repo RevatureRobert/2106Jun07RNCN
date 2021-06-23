@@ -9,5 +9,5 @@
         "outDir": "./dist"
     },
 
-    "include": ["./src/*.ts", "src/server.js"]
+    "include": ["./src/*.ts", "src/server.mjs"]
 }

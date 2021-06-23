@@ -25,16 +25,23 @@ var port = process.env.PORT || 8080;
 // get an instance of the express Router
 var router = express.Router();              
 
-// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
-router.get('/countries', function(req, res) {
 
-        res.json(flightDao.getCountries());
+let countries;
+countries = flightDao.getCountries();
+
+// test route to make sure everything is working (accessed at GET http://localhost:8080/api)
+router.get('/countries', function(req, res, ) {
+    
+        res.json(countries);
 });
 
+let flightsAugust;
+flightsAugust = flightDao.getFlightsAugust();
 
 router.get('/flights/august', function(req, res) {
  
-      res.json(flightDao.getFlightsAugust());
+     res.json(flightsAugust);
+
 });
 
 router.post('/country/add', function(req, res) {
@@ -43,13 +50,16 @@ router.post('/country/add', function(req, res) {
     
       res.end("Added item!");
   }
+
+  countries = flightDao.getCountries();
 });
 
 router.delete('/country/remove', function(req, res) {
 
     if(flightDao.deleteCountry(req.body.Code, req.body.Name)) {
+      countries = flightDao.getCountries();
 
-      res.end("Item deleted succesfully!");
+      res.send("Item deleted succesfully!");
     }
 
 });
@@ -58,8 +68,11 @@ router.put("/country/update", function(req, res) {
 
 
   if(flightDao.updateCountry(req.body.Code, req.body.Name)) {
-    res.end("Item updated successfully!");
+    countries = flightDao.getCountries();
+
+    res.send("Item updated successfully!");
   }
+  countries = flightDao.getCountries();
 
 });
 

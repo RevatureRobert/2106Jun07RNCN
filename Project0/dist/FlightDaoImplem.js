@@ -39,6 +39,9 @@ addCountry(code, name) {
 
     var params = {
       TableName: "Flight_Countries",
+      Key: {
+        "Code": code
+      },
       Item: {
         "Code": code,
         "Name": name
@@ -94,9 +97,17 @@ updateCountry(code, name)  {
     },
     Item: {
       "Code": code,
-      "Name": name
+      "Name": name,
+    },
+    ExpressionAttributeNames: {
+      "#ns": "Name"
+    },
+    UpdateExpression:  "set #ns = :n",
+    ExpressionAttributeValues: {
+      
+      ":n": name
     }
-  }
+  };
 
   docClient.update(params, function(err, data) {
     if (err) {
@@ -129,7 +140,6 @@ getCountries()   {
     
               output.push(element);
          
-    
                
             });
         }
