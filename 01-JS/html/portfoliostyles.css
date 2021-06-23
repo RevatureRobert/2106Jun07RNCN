@@ -1,0 +1,33 @@
+.right{
+    text-align: center;
+    vertical-align: center;
+    float: center;
+    font:serif;
+
+} 
+.paragraph{
+    text-align: center;
+    float:center;
+}
+.box{
+    height: 500px;
+    width: 450px;
+    padding: 150px;
+    border: 50px solid #091346;
+    margin: 0px;
+    background-color: rgb(223, 251, 251);
+    float: left;
+  
+}
+.footer{
+    position:absolute;
+   bottom:0;
+   width:100%;
+   height:60px; 
+   float: right;
+   text-align: center;  
+}
+.image{
+    height:500px;
+    width:450px;
+}
