@@ -1,0 +1,26 @@
+{
+  "name": "project0-daguinson-fleurantin",
+  "version": "1.0.0",
+  "description": "An API with node, express, and typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.ts",
+    "compile": "tsc -p ./"
+  },
+  "author": "Daguinson Fleurantin",
+  "license": "ISC",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.18.0",
+    "@aws-sdk/lib-dynamodb": "^3.18.0",
+    "express": "^4.17.1",
+    "uuidv4": "^6.2.10"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/node": "^15.12.2",
+    "nodemon": "^2.0.7",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.3.2"
+  }
+}
