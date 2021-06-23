@@ -1,7 +1,7 @@
-import { DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb";
-import {ddbClient} from "./ddbClient.js";
-// Set the AWS Region.
-const REGION = "us-west-1"; //e.g. "us-east-1"
+import {DynamoDBClient} from "@aws-sdk/client-dynamodb"
+import {DynamoDBDocumentClient} from "@aws-sdk/lib-dynamodb"
+const REGION:string = "us-west-1"
+const ddb:DynamoDBClient = new DynamoDBClient({region: REGION})
 
 const marshallOptions = {
     // Whether to automatically convert empty strings, blobs, and sets to `null`.
@@ -18,8 +18,6 @@ const unmarshallOptions = {
 };
 
 const translateConfig = { marshallOptions, unmarshallOptions };
+const ddbDoc = DynamoDBDocumentClient.from(ddb, translateConfig);
 
-// Create the DynamoDB Document client.
-const ddbDocClient = DynamoDBDocumentClient.from(ddbClient, translateConfig);
-
-export { ddbDocClient };
+export {ddb, ddbDoc};
