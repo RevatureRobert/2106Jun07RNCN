@@ -7,7 +7,7 @@
     </head>
     <body>
         <div>
-            <div id = "my box" class="box"><img class="image" src="https://memeapibucket.s3.us-east-2.amazonaws.com/csshtml/profile.jpg">
+            <div id = "my box" class="box" script=><img class="image" src="https://memeapibucket.s3.us-east-2.amazonaws.com/csshtml/profile.jpg">
             </div>
             <h1 class="right">Samuel Smetzer
                 
@@ -15,20 +15,33 @@
             <h5 class="paragraph">INSERT COOL PORTFOLIO FACTS HERE</h5>
             
         </div>
+        <script type="text/javascript">
+            var currentBorderColor = "#091346";
+            var currentBackGroundColor =  "#7df9ff";
+    
+            setInterval(() => {
+                if(currentBorderColor === "#091346" && currentBackGroundColor === "#7df9ff"){
+                    
+                    currentBorderColor = "#7df9ff";
+                    currentBackGroundColor = "#091346";
+                    document.getElementById("my box").style.borderColor = currentBorderColor;
+                    document.getElementById("my box").style.backgroundColor = currentBackGroundColor;
+                }
+                else{
+                    currentBorderColor = "#091346";
+                    currentBackGroundColor = "#7df9ff";
+                    document.getElementById("my box").style.borderColor = currentBorderColor;
+                    document.getElementById("my box").style.backgroundColor = currentBackGroundColor;
+                }
+            }, 5000);
+        </script>
+       
+        <a class="hyperlink1" href= "https://twitter.com/ClassySnake_">Samuel Smetzers Twitter</a>
+        <a class="hyperlink1" href= "https://www.linkedin.com/in/samuel-smetzer-66297a138/">Samuel Smetzers Linkedin</a>
+
     </body>
-    <footer>
-        <h5 class="footer">Insert Social Media links here </h5>
-    </footer>
-    <script type="text/javascript">
-        var currentColor = "";
-        document.body.
-        setInterval(() => {
-            if(currentColor != "091346"){
-                currentColor = "7df9ff"
-                document.getElementById("my box").querySelector()
-            }
-        }, 1000);
-    </script>
+    
+    
     
 </html>
 
