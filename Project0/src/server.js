@@ -61,6 +61,7 @@ router.delete('/country/remove', function(req, res) {
 
       res.send("Item deleted succesfully!");
     }
+    countries = flightDao.getCountries();
 
 });
 
