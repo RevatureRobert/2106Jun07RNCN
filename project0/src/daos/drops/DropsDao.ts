@@ -1,15 +1,14 @@
 import  MonsterDrops, { IMonsterDrops } from "../../entities/Drops";
 import { ddb, ddbDoc } from "../DB/dynamo";
-import { DeleteCommand, PutCommand, QueryCommand, ScanCommand, UpdateCommand } from "@aws-sdk/lib-dynamodb";
+import { DeleteCommand, PutCommand, QueryCommand, ScanCommand } from "@aws-sdk/lib-dynamodb";
 
 const TABLE = "genshin";
 
 export interface Dao{
     getOne: (name: string) => Promise<IMonsterDrops|null>;
     add: (IDrop: IMonsterDrops) => Promise<void>;
-    updateDrop: (IDrop: IMonsterDrops) => Promise<any>;
     getAll: () => Promise<any>;
-    deleteDrop: (name: string) => Promise<any>; 
+    deleteDrop: (name: string) => Promise<void>; 
 }
 
 class DropsDao implements Dao{
@@ -57,81 +56,34 @@ class DropsDao implements Dao{
         try {
             const data = await ddbDoc.send(new ScanCommand(params));
             console.log("Success :", data.Items);
-            return Promise.resolve(data);
+            return Promise.resolve(data.Items);
         } catch (err) {
             console.log("Error", err);
         }
     }
 
     //dao post command to add 1 item to the database
-    public async add(IDrop: IMonsterDrops): Promise<void>{        
-        console.log(IDrop);
+    public async add(IDrop: IMonsterDrops): Promise<void>{    
         const params = {
             TableName: this.table,
-            //Item: IDrop, 
-            Item: {
-                "dropName": {M: IDrop.dropName},
-                "generalName": {S: IDrop.generalName},
-                "monster": {SS: IDrop.monster},
-                "dropRate":  {N: IDrop.dropRate},
-                "minWorldRank": {N: IDrop.minWorldRank},
-                "rarity": {S: IDrop.rarity},
-            }
-        };
-        console.log(params);
-        try {
-            //add to DB
-            const data = await ddbDoc.send(new PutCommand(params));
-            console.log(data);
-        }catch (err) {
-            console.error(err);
+            Item: IDrop
         }
+        await ddbDoc.send(new PutCommand(params));
     }
 
-    public async deleteDrop(name: string): Promise<any>{
+    public async deleteDrop(dropName: string): Promise<void>{
+        console.log(dropName);
         const params = {
             TableName: this.table,
             Key: {
-                ':dropName': name
+                "dropName": dropName,
             }
         }
         try {
-            const data = await ddbDoc.send(new DeleteCommand(params));
+            await ddbDoc.send(new DeleteCommand(params));
             console.log("Success - item deleted");
-            return data;
         } catch (err) {
             console.log("Error", err);
-        }
-    }
-
-    public async updateDrop(iDrop: IMonsterDrops): Promise<any> {
-        const params = {
-            TableName: this.table,
-            /*ExpressionAttributeValues: {
-                ':dropName': iDrop.dropName
-            },*/
-            Key: {
-              ":dropName": iDrop.dropName
-            },
-            // Define expressions for the new or updated attributes
-            UpdateExpression: "set generalName =:g, monster = :t, dropRate = :d, minWorldRank = :m, rarity = :s", // For example, "'set Title = :t, Subtitle = :s'"
-            ExpressionAttributeValues: {
-              ":g": iDrop.generalName,
-              ":t": iDrop.monster, // For example ':t' : 'NEW_TITLE'
-              ":d": iDrop.dropRate,
-              ":m": iDrop.minWorldRank,
-              ":s": iDrop.rarity, // For example ':s' : 'NEW_SUBTITLE'
-            },
-          };
-          
-        
-        try {
-          const data = await ddbDoc.send(new UpdateCommand(params));
-          console.log("Success - item added or updated", data);
-          console.log(params);
-          return data;
-        } catch (err) {
-          console.log("Error", err);
         }
     }
 }

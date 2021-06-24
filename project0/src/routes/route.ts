@@ -1,12 +1,12 @@
 import { Router } from 'express';
-import { getItem, addItem, getAll, deleteDrop, updateDrop } from './genDrops'
+import { getItem, addOrUpdate, getAll, deleteDrop } from './genDrops'
 
 const DropRouter = Router();
-DropRouter.get('/getOne', getItem);
+DropRouter.get('/item', getItem);
 DropRouter.get('/getAll', getAll);
-DropRouter.post('/add', addItem);
-DropRouter.delete('/dropped', deleteDrop);
-DropRouter.put('/update', updateDrop);
+DropRouter.post('/item', addOrUpdate);
+DropRouter.put('/item', addOrUpdate);
+DropRouter.delete('/delete/:dropName', deleteDrop);
 
 const route = Router();
 route.use('/', DropRouter);

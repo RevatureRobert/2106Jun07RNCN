@@ -22,28 +22,23 @@ export async function getItem(req: Request, res: Response) {
 
 export async function getAll(req: Request, res: Response) {    //Check if that specific dropName is in DB
     //Returns Item information to server
-    return await dao.getAll();
-}
-
-export async function updateDrop(req: Request, res: Response){
-    const {updated} = req.body;
-    return await dao.deleteDrop(updated);
-}
-
-export async function deleteDrop(req: Request, res: Response){
-    const {dropName} = req.body;
-    let drop:IMonsterDrops|null = await dao.deleteDrop(dropName);
+    let drop = await dao.getAll();
     return res.status(OK).json(drop).end();
 }
 
-export async function addItem(req: Request, res: Response){
-    let {drop} = req.body;
-    console.log(typeof drop);
-    if(!drop){
+export async function deleteDrop(req: Request, res: Response){
+    const {dropName} = req.params;
+    await dao.deleteDrop(dropName);
+    res.status(200).json(`${dropName} was successfully deleted`);
+}
+
+export async function addOrUpdate(req: Request, res: Response){
+    let {IDrop} = req.body;
+    if(!IDrop){
         return res.status(BAD_REQUEST).json({
             error: "Missing 1 or more parameters"
         });
     }
-    await dao.add(drop);
+    await dao.add(IDrop);
     return res.status(CREATED).end();
 }
