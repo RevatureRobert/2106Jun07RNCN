@@ -30,3 +30,18 @@
  ```HTML
     <button onclick="console.log('in the event listener')">click me</button>
  ```
+
+## Accessing information
+ - AJAX API
+  - Asynchronous JavaScript and XML
+ - FETCH API
+
+## CORS
+ - Cross Origin Resource Sharing
+
+## Events
+ - Event listener
+ - Event Object
+ - Bubbling and Capturing
+  - Bubbling will activate the event on the parent or containing element after the initial element. 
+  - Capturing will take the opposite effect and activate the surrounding elements before the initial element.
