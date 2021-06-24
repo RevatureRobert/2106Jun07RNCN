@@ -3,7 +3,7 @@ body{
 }
 
 form {
-    background-color: red;
+    /* background-color: red; */
 }
 
 span {
@@ -21,4 +21,18 @@ span {
 
 .one {
     color: red;
+}
+
+.one:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#formy {
+    padding: 5%;
+    /* border: 50px solid black ; */
+    border-color: black;
+    border-style: solid;
+    border-width: 5px;
+    margin: auto;
 }
