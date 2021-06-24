@@ -2,12 +2,12 @@ import { Router } from 'express';
 import { getItem, addOrUpdate, getAll, deleteDrop } from './genDrops'
 
 const DropRouter = Router();
-DropRouter.get('/item', getItem);
-DropRouter.get('/getAll', getAll);
-DropRouter.post('/item', addOrUpdate);
-DropRouter.put('/item', addOrUpdate);
-DropRouter.delete('/delete/:dropName', deleteDrop);
+DropRouter.get('/', getItem);
+DropRouter.get('/all', getAll);
+DropRouter.post('/', addOrUpdate);
+DropRouter.put('/', addOrUpdate);
+DropRouter.delete('/:dropName', deleteDrop);
 
 const route = Router();
-route.use('/', DropRouter);
+route.use('/monsterDrop', DropRouter);
 export default route;

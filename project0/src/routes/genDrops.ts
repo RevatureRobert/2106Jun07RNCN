@@ -40,5 +40,5 @@ export async function addOrUpdate(req: Request, res: Response){
         });
     }
     await dao.add(IDrop);
-    return res.status(CREATED).end();
+    res.status(200).json(`${IDrop.dropName} was added or updated`).end();
 }
