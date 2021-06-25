@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" 
+crossorigin="anonymous">
+<script defer src = "../js/index.js"></script>
+        <link rel="stylesheet" href="../css/main.css" type="text/css">
+        <title>Our awesome first html page</title>
+    </head>
+    <body>
+        <p>This is <span>the</span> paragraph</p>
+        <img src="" alt="This image could not be displayed"/>
+
+        <p class="one three two">This is a paragraph</p>
+
+        <!-- The form allows you to send information to your server. The action
+                attribute will determine where the request will be made and
+                the method attribute will determine what http method it will
+                use. The input elements within the form element will include 
+                information in the web request with key value pairs. The
+                pairs will have a key of the name attribute and the value
+                will be the value attribute.
+        -->
+        <form method="POST" action="http://localhost:3000/form" id="formy">
+            <input name="username" type="text" placeholder="username"><br>
+            <input name="password" type="password" placeholder="password"><br>
+            <input type="submit" value="submit" class="btn-primary">
+        </form>
+
+
+        <!-- The beginning of tv -->
+        <div class="tv">
+            <div class = "inner">
+                <h1 id="tvBrand"></h1>
+            </div>
+            <div class="body">
+                <p id="tvType"></p>
+                <p id="tvSize"></p>
+            </div>
+        </div>
+
+        <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+    crossorigin="anonymous"></script>
+    </body>
+</html>
