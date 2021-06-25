@@ -32,3 +32,6 @@ Create a social media application utilizing nodejs and react to provide people a
 | 3 | Hannah Mulato | Matthew Terry | Kent Smith | Brandon Kirsch |
 | 4 | Imran Ilyas | Joab Smith | Nick Wang |Matthew Hanrahan
 | 5 | Tyler Yates | Matthew Otto | Jacob Kula
+
+### link to GitHub Repo
+ - [mat2718/proj1](https://github.com/Revature-2106RCN-Team-3/Project_One)
