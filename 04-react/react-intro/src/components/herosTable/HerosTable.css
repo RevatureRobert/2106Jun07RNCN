@@ -1,0 +1,29 @@
+/* table td, table th{
+    padding: 50px;
+    border: 20px dotted blue;
+    font-style: italic;
+    font-size: 150%;
+    color: red;
+    font-weight: bold;
+    font-variant: small-caps;
+    text-align: center;
+    text-decoration: overline underline;
+    text-decoration-style: wavy;
+    
+}
+
+table {
+    margin: auto;
+} */
+
+table, tr, td, th {
+    margin: auto;
+    border: 1px solid #010101;
+    padding: 2px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+tr {
+    background-color: #fafafa;
+}

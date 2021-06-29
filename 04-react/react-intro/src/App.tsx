@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Hero } from "./models/Hero";
-import { HerosTable } from "./components/herosTable/herosTable";
+import { HeroEditor } from "./components/heroEditor/HeroEditor";
+import { HerosTable } from "./components/herosTable/HerosTable";
 
 const App: React.FC<any> = (props: any) => {
 
@@ -46,6 +47,7 @@ const App: React.FC<any> = (props: any) => {
   return (
     <div>
       <HerosTable bodyCount={9000} heros={heros} />
+      <HeroEditor hero = {heros[0]} setHero = {(her:Hero) => setHeros([...heros, her])}/>
     </div>
   );
 };
