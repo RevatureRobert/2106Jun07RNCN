@@ -12,7 +12,14 @@
  ```
 
  ## Linking
- 1. Inline: style attribute applied to individual elements (example: <p style="color: red"> this is red</p>)
+ 1. Inline: style attribute applied to individual elements (example: 
+ 
+```HTML
+ <body>
+  <p style="color: red"> this is red</p>
+ </body>
+```
+ )
  2. Internal: The entire CSS document will be put inside the \<head\> element of the html document (example: 
  ```HTML
 <head>
