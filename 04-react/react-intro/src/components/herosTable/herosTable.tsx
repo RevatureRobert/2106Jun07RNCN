@@ -1,12 +1,13 @@
-import React, { useState } from 'react';
-import {Hero} from '../../models/Hero'
+import React from 'react';
+import { Table } from 'reactstrap';
+import { Hero } from '../../models/Hero';
 import { HeroRow } from '../HeroRow/HeroRow';
-import './HerosTable.css'
-import {Table} from 'reactstrap'
+import './HerosTable.css';
 
 interface IProps {
     bodyCount: number;
-    heros: Hero[]
+    heros: Hero[];
+    setCurrentHero: (num:number) => void;
 }
 
 // This component should show all the heros in table form
@@ -26,7 +27,7 @@ export const HerosTable: React.FC<IProps> = (props: IProps) => {
                 {/* React needs a key to keep track of any 
                 duplicated information such as in lists 
                 or tables */}
-                {props.heros.map((hero, index) => (<HeroRow hero = {hero} key = {index}/>))}
+                {props.heros.map((hero, index) => (<HeroRow select={() => props.setCurrentHero(index)} hero = {hero} key = {index}/>))}
             </tbody>
         </Table>
     )
