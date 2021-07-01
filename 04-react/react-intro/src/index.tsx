@@ -1,14 +1,22 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Provider} from 'react-redux'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { createStore, Store } from 'redux';
+import { reducers } from './redux/Reducers';
+import { IAppState } from './redux/Store';
+import { IAppActions } from './redux/Actions';
+
+const w:any = window;
+const store: Store<IAppState, IAppActions> = createStore(reducers, w.__REDUX_DEVTOOLS_EXTENSION__ && w.__REDUX_DEVTOOLS_EXTENSION__())
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App hey="something" />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
