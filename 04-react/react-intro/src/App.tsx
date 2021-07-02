@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Hero } from "./models/Hero";
 import { HeroEditor } from "./components/heroEditor/HeroEditor";
-import { HerosTable } from "./components/herosTable/HerosTable";
+import { HerosTable } from "./components/herosTable/herosTable";
 import { HeroMenu } from "./components/heroMenu/HeroMenu";
 
 const App: React.FC<any> = (props: any) => {
