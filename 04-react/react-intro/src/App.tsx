@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { HeroEditor } from './components/heroEditor/HeroEditor';
 import { HerosTable } from './components/heros/herosTable';
-import { Hero } from './models/Hero';
+import { HeroMenu } from './components/heroMenu/HeroMenu';
+import { useSelector } from 'react-redux';
+import { IAppState } from './redux/Store';
 
 const App: React.FC<any> = (props:any) => {
-
-  const [heros, setHeros] = useState<Hero>({
-    name: 'Superman',
-    archNemesis: 'Lex Luthor',
-    power: 'Like everything',
-    secretIdentity: 'Clark Kent',
-    weakness: 'kryptonite'
-  })
+  const currentHero = useSelector((state:IAppState) => state.editHeroState.currentHero)
 
   return (
     <div>
-      <HerosTable bodyCount={9000} heros={heros} />
+      <HeroMenu />
+      <HerosTable />
+      {currentHero > -1 && <HeroEditor />}
     </div>
   );
 }
