@@ -7,7 +7,7 @@ Rewrite your Project 1 using the following technologies:
 
 #### Technologies
 1. React Native
-2. AWS Serverless Architecture
+2. AWS Serverless Architecture (Lambda, Cognito, DynamoDB, XRay, S3, APIGW, Step Functions, SNS, SQS, Kinesis, etc.)
 3. AWS CodePipeline
 4. AWS Amplify/SAM/CFN/Serverless-FW as backend build tool
 5. Expo as React Native build tool
