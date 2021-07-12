@@ -34,6 +34,10 @@ Rewrite your Project 1 using the following technologies:
 ### Deadline
 7/30/2021
 
+### Submission
+Repositories should be created under the RevatureRobert Organization and follow the naming:
+- team-x-p2-[fe, be]
+
 ### Teams
 | Number | Member 1 | Member 2 | Member 3 | Member 4 |
 | ------ | -------- | -------- | -------- | -------- |
