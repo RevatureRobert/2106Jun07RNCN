@@ -1,0 +1,43 @@
+{
+    "people": [
+        {
+            "name": "bob",
+            "age": 55,
+            "children": [
+                {
+                    "name": "alice",
+                    "age": 27,
+                    "children": [
+                        {
+                            "name": "sally",
+                            "age": 2,
+                            "children": null
+                        }
+                    ]
+                },
+                {
+                    "name": "billy",
+                    "age": 32,
+                    "children": null
+                }
+            ]
+        }
+    ],
+    "ages": [
+        55,
+        27,
+        32,
+        2
+    ],
+    "names": [
+        "bob",
+        "alice",
+        "billy",
+        "sally"
+    ],
+    "origin":{
+        "country": "USA",
+        "state":"florida",
+        "city":"orlando"
+    }
+}
